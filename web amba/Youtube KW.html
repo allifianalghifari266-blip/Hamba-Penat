@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemutar Video</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2e2e4f);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .video-container {
+      position: relative;
+      display: inline-block;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    video {
+      width: 640px;
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    .controls {
+      margin-top: 15px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 5px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pemutar Video Sederhana</h1>
+
+  <div class="video-container">
+    <video id="myVideo" controls>
+      <source src="WhatsApp Video 2025-10-06 at 15.29.03.mp4" type="video/mp4">
+      Browser Anda tidak mendukung pemutar video HTML5.
+    </video>
+  </div>
+
+  <div class="controls">
+    <button onclick="playVideo()">▶️</button>
+    <button onclick="pauseVideo()">⏸️</button>
+    <button onclick="stopVideo()">⏹️</button>
+  </div>
+  <script>
+    const video = document.getElementById("myVideo");
+
+    function playVideo() {
+      video.play();
+    }
+
+    function pauseVideo() {
+      video.pause();
+    }
+
+    function stopVideo() {
+      video.pause();
+      video.currentTime = 0;
+    }
+  </script>
+
+</body>
+</html>
